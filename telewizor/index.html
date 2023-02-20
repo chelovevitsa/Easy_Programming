@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telewizor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="line">
+        <div class="line-inside">
+            <div class="container">
+                <div class="telewizor">
+                    <div class="l1" id="l1" onclick="lin()"></div>
+                    <div class="l2" id="l2" onclick="lin()"></div>
+                    <div class="l3" id="l3" onclick="lin()"></div>
+
+                    <div class="px1"id="px1" onclick="px1()"></div>
+                    <div class="px2" id="px2" onclick="px2()"></div>
+                    <div class="px3" id="px3" onclick="px3()"></div>
+                </div>
+                <div class="nogi">
+                </div>
+                <div class="programy">
+                    <div class="program" id='1'>
+                    </div>
+                    <div class="program"id='2'>
+                    </div>
+                    <div class="program" id='3'>
+                    </div>
+                    <div class="program" id='4'>
+                    </div>
+                </div>
+                <input type="text" id="nazwa" placeholder="nazwa" class="input" >
+                <input type="text" id="czas" placeholder="czas" class="input" >
+                <input type="text" id="programa" placeholder="programa" class="input" >
+                <button class="button" id="add">Add</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const button = document.getElementById('add');
+        button.addEventListener('click', () => {
+            const name = document.getElementById('nazwa').value;
+            const time = document.getElementById('czas').value;
+            const program = document.getElementById('programa').value;
+            const div = document.createElement('div');
+            div.innerHTML = name + time + program;
+            document.body.appendChild(div);
+        })
+
+        function px1(){
+            document.getElementById("px1").style.background='red'
+        }
+        function px2(){
+            document.getElementById("px2").style.background='red'
+        }
+        function px3(){
+            document.getElementById("px3").style.background='red'
+        }
+
+        function lin(){
+            document.getElementById("l1").style.background='red'
+            document.getElementById("l2").style.background='red'
+            document.getElementById("l3").style.background='red'
+        }
+
+        const program1 = document.getElementById('1');
+        const program2 = document.getElementById('2');
+        const program3 = document.getElementById('3');
+        const program4 = document.getElementById('4');
+        const programs = [program1, program2, program3, program4];
+
+        programs.forEach((program) => {
+            program.addEventListener('click', () => {
+                program.style.backgroundImage = "url('https://static.wirtualnemedia.pl/media/top/Polsat_News_oprawa_listopad_2022.jpg')";
+            })
+        })
+
+        // program1.addEventListener('click', () => {
+        //     program1.style.backgroundImage = "url('https://static.wirtualnemedia.pl/media/top/Polsat_News_oprawa_listopad_2022.jpg')";
+        // })
+        // program2.addEventListener('click', () => {
+        //     program2.style.backgroundImage = "url('https://static.wirtualnemedia.pl/media/top/Polsat_News_oprawa_listopad_2022.jpg')";
+        // })
+        // program3.addEventListener('click', () => {
+        //     program3.style.backgroundImage = "url('https://static.wirtualnemedia.pl/media/top/Polsat_News_oprawa_listopad_2022.jpg')";
+        // })
+        // program4.addEventListener('click', () => {
+        //     program4.style.backgroundImage = "url('https://static.wirtualnemedia.pl/media/top/Polsat_News_oprawa_listopad_2022.jpg')";
+        // })
+    </script>
+</body>
+</html>

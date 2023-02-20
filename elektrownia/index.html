@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrownia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://www.bik.pl/bik-sie-sprawdza/img/bik-logo.png" alt="logo">
+        <h5 class="data">
+            <script>
+                var d = new Date();
+                document.write(d.toLocaleString('pl-PL'));
+            </script>
+        </h5>
+        <p class="number">+4855686798</p>
+    </header>
+    <div class="slogan-box">
+        <p class="slogan">Masz hajs? Przejdź do nas!</p>
+    </div>
+    <div class="container">
+        <div class="product">
+            <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/39/3944210/Smartfon-NOTHING-PHONE-1-120Hz-Czarny-front-tyl.jpg" alt="pr">
+            <p class="about">Qualcomm Snapdragon 778G+ 5G, Ośmiordzeniowy</p>
+            <button onclick="addToCart(1)">KUP</button>
+        </div>
+        <div class="product">
+            <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/39/3942234/Smartfon-ASUS-ROG-Phone-6-5G-Czarny-tyl-front.jpg" alt="pr">
+            <p class="about">5G, Wi-Fi, NFC, Bluetooth 5.2, USB typ C</p>
+            <button onclick="addToCart(1)">KUP</button>
+        </div>
+        <div class="product">
+            <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/41/4117906/Smartfon-APPLE-Polnoc-1.jpg" alt="pr">
+            <p class="about">6.1", 2532 x 1170px, OLED, Super Retina XDR</p>
+            <button onclick="addToCart(1)">KUP</button>
+        </div>
+        <div class="product">
+            <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/26/2652093/Smartfon-APPLE-iPhone-11--Black-Front-Tyl.jpg" alt="pr">
+            <p class="about">Tylny 2 x 12 Mpx, Przedni 12 Mpx</p>
+            <button onclick="addToCart(1)">KUP</button>
+        </div>
+    </div>
+    <div class="cart" id="cart">
+        <p>Kosz</p>
+        <p>Suma: <span id="total"></span></p>
+    </div>
+</body>
+<footer>
+    <form action="kontakt.html" method="post" onsubmit="saveFormData()">
+      <label for="name">name:</label>
+      <input type="text" id="name" name="name">
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" name="surname">
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email">
+      <input type="submit" value="Send">
+    </form>
+  </footer>
+<script src="script.js"></script>
+</html>
